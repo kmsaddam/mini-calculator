@@ -16,8 +16,25 @@
 
         document.write(`Your first number: ${number1} <br />`);
         document.write(`Your second number: ${number2} <br />`);
-        document.write(`Your calculation: ${number1} ${operator} ${number2}`);
+        document.write(`Your operator: ${operator} <br />`);
+
+
         
+            if(isNaN(number1) || isNaN(number2)) {
+                document.write(`Invalid Input`);
+            } else {
+                if(operator == '+' || operator == '-' || operator == '*' || operator == '/') {
+                    document.write(`Your calculation: ${number1} ${operator} ${number2} = ${ eval(`${number1} ${operator} ${number2}`) }`);
+                } else {
+                    document.write(`Invalid Operator`);
+                }
+            }
+       
+        
+
+
+        
+
     </script>
     
 </body>
