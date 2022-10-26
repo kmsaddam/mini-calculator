@@ -24,7 +24,8 @@
                 document.write(`Invalid Input`);
             } else {
                 if(operator == '+' || operator == '-' || operator == '*' || operator == '/') {
-                    document.write(`Your calculation: ${number1} ${operator} ${number2} = ${ eval(`${number1} ${operator} ${number2}`) }`);
+                    var calculation = eval(`${number1} ${operator} ${number2}`);
+                    document.write(`Your calculation: ${number1} ${operator} ${number2} = ${calculation}`);
                 } else {
                     document.write(`Invalid Operator`);
                 }
